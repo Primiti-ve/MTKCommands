@@ -31,7 +31,7 @@ jobs:
         run: mkdir -p Packages
 
       - name: Build MTKc.rbxm
-        run: rojo build -o MTKc.rbxm default.project.json
+        run: rojo build -o MTKc.rbxm pack.project.json
 
       - name: Upload MTKc.rbxm as build artifact
         uses: actions/upload-artifact@v4
