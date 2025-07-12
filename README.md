@@ -1,4 +1,4 @@
-# MTKCommands
+# MTKCommands 0.0.3
 A set of tools for games using the EToH Multi-Tower-Kit V4.
 
 Please read the [list of required patches](https://github.com/Primiti-ve/MTKCommands/blob/main/PATCHES.md) to get started.
