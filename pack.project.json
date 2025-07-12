@@ -1,5 +1,5 @@
 {
-  "name": "mtkcommands",
+  "name": "MTKCommands",
 
   "tree": {
     "$className": "Folder",
@@ -29,18 +29,13 @@
       }
     },
 
-    "StarterPlayer": {
+    "StarterPlayerScripts": {
       "$className": "Folder",
       "$ignoreUnknownInstances": true,
 
-      "StarterPlayerScripts": {
-        "$className": "StarterPlayerScripts",
+      "MTKCommands": {
         "$ignoreUnknownInstances": true,
-
-        "MTKCommands": {
-          "$ignoreUnknownInstances": true,
-          "$path": "src/Client"
-        }
+        "$path": "src/Client"
       }
     }
   }
