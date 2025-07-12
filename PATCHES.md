@@ -60,7 +60,6 @@ do
 						
 						Teleport:TeleportPlayerToPart(Player, Winpad)
 						Player.Character:PivotTo(Player.Character:GetPivot() * CFrame.new(0, Player.Character:GetExtentsSize(), 0))
-						--PlayerTouchedWinpad(Player.Name, Tower.Name, EndingID)
 						
 						Player.CharacterAdded:Once(function()
 							Player:SetAttribute("DisableAC", false)
