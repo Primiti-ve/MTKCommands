@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout Main
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install RoKit
         uses: CompeyDev/setup-rokit@v0.1.2
@@ -34,7 +34,7 @@ jobs:
         run: rojo build -o MTKc.rbxm default.project.json
 
       - name: Upload pack.rbxm as build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with: 
           name: MTKc
           path: pack.rbxm
