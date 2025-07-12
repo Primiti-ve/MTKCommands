@@ -24,5 +24,15 @@ jobs:
       - name: rojo build
         uses: CompeyDev/rojo-build-action@0.1.5
         with:
-          output: model
+          output: MTKc
           type: rbxm
+
+      - name: Upload files to a GitHub release
+        uses: svenstaro/upload-release-action@2.11.2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: MTKc
+          asset_name: MTKc
+          tag: ${{ github.ref }}
+          overwrite: true
+          body: "This is my release text"
