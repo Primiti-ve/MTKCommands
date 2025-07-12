@@ -5,7 +5,6 @@ MTKCommands runs on a modified version of MTK v4. Below is a list of functions a
 ### Command Runner
 Place this just above the last do-end block.
 ```lua
-do
 	local CommandsNamespace = require(ReplicatedStorage:WaitForChild("MTKCommands"):WaitForChild("Namespaces"):WaitForChild("Commands"))
 	local Utils = require(ReplicatedStorage:WaitForChild("MTKCommands"):WaitForChild("Utils"))
 
@@ -38,33 +37,52 @@ do
 
 			if Player and PlayerInfo then
 				local TowerName = PlayerInfo.CurrentTower
-				local Tower = Towers[TowerName].Folder :: Folder
 				
+				local Tower = Towers[TowerName]
+				local TowerFolder = Tower.Folder :: Folder
+
 				if Tower then
-					local Winpad = Tower.Obby:WaitForChild("WinPad") or Tower.Obby:WaitForChild("Winpad")
-					
+					local Winpad = TowerFolder.Obby:WaitForChild("WinPad") or TowerFolder.Obby:WaitForChild("Winpad")
+
 					if not Winpad then
-						Winpad = Tower:WaitForChild("WinPad") or Tower:WaitForChild("Winpad")
+						Winpad = TowerFolder:WaitForChild("WinPad") or TowerFolder:WaitForChild("Winpad")
 					end
-					
+
 					if Winpad then
 						local EndingID:string = Attributes:GetString(Winpad, "EndingID") or ""
-						
+
 						if EndingID == "" then
 							Winpad:SetAttribute("EndingID", TowerName)
-							
+
 							EndingID = TowerName
 						end
-						
+
 						Player:SetAttribute("DisableAC", true)
-						
+
 						Teleport:TeleportPlayerToPart(Player, Winpad)
 						Player.Character:PivotTo(Player.Character:GetPivot() * CFrame.new(0, Player.Character:GetExtentsSize(), 0))
-						
+
 						Player.CharacterAdded:Once(function()
 							Player:SetAttribute("DisableAC", false)
 						end)
 					end
+				end
+			end
+		end
+	end)
+	
+	CommandsNamespace.packets.ForceSpawnPoint.listen(function(Data: string, Executor: Player?)
+		if Executor and Utils.CheckPermissions(Executor) then
+			local Player = PlayersService:FindFirstChild(Data) :: Player
+			local PlayerInfo = Players[Player.Name] :: PlayerInfo
+
+			if Player and PlayerInfo then
+				local TowerName = PlayerInfo.CurrentTower
+				local Tower = Towers[TowerName]
+
+				if Tower then
+					Teleport:TeleportPlayerToPart(Player, Tower.SpawnLocation)
+					Player.Character:PivotTo(Player.Character:GetPivot() * CFrame.new(0, Player.Character:GetExtentsSize(), 0))
 				end
 			end
 		end

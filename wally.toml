@@ -1,7 +1,7 @@
 [package]
 name = "primiti-ve/mtkcommands"
-description = "A set of tools for games using the EToH Multi-Tower-Kit V4."
-version = "0.0.1"
+description = "A set of tools for games using the EToH Multi-Tower-Kit V4. Go to the GitHub repository for more information. https://github.com/Primiti-ve/MTKCommands"
+version = "0.0.2"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 

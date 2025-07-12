@@ -16,7 +16,10 @@ return ByteNet.defineNamespace("Commands", function()
 				value = ByteNet.playerName,
 			}),
 
-			ForceWin = ByteNet.definePacket({
+			ForceWinpad = ByteNet.definePacket({
+				value = ByteNet.playerName,
+			}),
+			ForceSpawnPoint = ByteNet.definePacket({
 				value = ByteNet.playerName,
 			}),
 

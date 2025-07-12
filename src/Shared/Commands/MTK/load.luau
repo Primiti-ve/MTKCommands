@@ -5,7 +5,7 @@ local CommandsNamespace =
 return {
 	Name = "load",
 	Description = "Loads a tower for a player or a set of players.",
-	Group = "Towers",
+	Group = "MTK",
 	Args = {
 		{
 			Type = "players",
@@ -13,7 +13,7 @@ return {
 			Description = "The players to load the tower for.",
 		},
 		{
-			Type = "string",
+			Type = "tower",
 			Name = "name",
 			Description = "The name of the tower to load.",
 		},
@@ -33,6 +33,6 @@ return {
 			})
 		end
 
-		return "Loaded tower for player."
+		return "Loaded tower for players."
 	end,
 }

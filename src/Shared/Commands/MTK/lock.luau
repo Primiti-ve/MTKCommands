@@ -3,22 +3,22 @@ local CommandsNamespace =
 	require(ReplicatedStorage:WaitForChild("MTKCommands"):WaitForChild("Namespaces"):WaitForChild("Commands"))
 
 return {
-	Name = "forcewinpad",
-	Description = "Force a player or set of players to teleport to the winpad.",
-	Group = "Towers",
+	Name = "lock",
+	Description = "Locks a player or a set of players from loading, unloading and restarting towers.",
+	Group = "MTK",
 	Args = {
 		{
 			Type = "players",
 			Name = "players",
-			Description = "The players to teleport.",
+			Description = "The players to lock.",
 		},
 	},
 
 	ClientRun = function(_Context, Players)
 		for _, Player in pairs(Players) do
-			CommandsNamespace.packets.ForceWin.send(Player.Name)
+			CommandsNamespace.packets.Lock.send(Player.Name)
 		end
 
-		return "Forced player to winpad."
+		return "Locked players from loading, unloading and restarting towers."
 	end,
 }

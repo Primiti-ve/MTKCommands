@@ -8,5 +8,6 @@ return {
         
 		Cmdr:SetPlaceName("MTKc")
 		Cmdr:RegisterHooksIn(ReplicatedStorage:WaitForChild("MTKCommands"):WaitForChild("Hooks"))
+		Cmdr:RegisterTypesIn(ReplicatedStorage:WaitForChild("MTKCommands"):WaitForChild("Types"))
 	end,
 }

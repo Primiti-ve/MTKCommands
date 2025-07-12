@@ -3,7 +3,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 return {
 	Name = "restart",
 	Description = "Restarts the tower for a player or set of players.",
-	Group = "Towers",
+	Group = "MTK",
 	Args = {
 		{
 			Type = "players",
@@ -17,6 +17,6 @@ return {
 			ReplicatedStorage.TowerGame.RestartRequested:FireServer(Player)
 		end
 
-		return "Restarted tower for player."
+		return "Restarted tower for players."
 	end,
 }
