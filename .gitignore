@@ -1,0 +1,11 @@
+sourcemap.json
+Packages/
+**/*.rbx[lm]*
+
+roblox.yml
+roblox.toml
+
+**/sourcemap.json
+dist/
+
+wally.lock

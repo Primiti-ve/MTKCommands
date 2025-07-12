@@ -1,0 +1,10 @@
+[package]
+name = "toadi/mtkcommands"
+version = "0.0.1"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Cmdr = "evaera/cmdr@1.12.0"
+ByteNet = "elitriare/bytenet-max@0.2.3"
+TopbarPlus = "1foreverhd/topbarplus@3.2.5"

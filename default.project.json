@@ -1,0 +1,47 @@
+{
+  "name": "MTKCommands",
+
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "$ignoreUnknownInstances": true,
+
+      "MTKCommands": {
+        "$ignoreUnknownInstances": true,
+        "$path": "src/Shared",
+
+        "Packages": {
+          "$ignoreUnknownInstances": true,
+          "$path": "Packages"
+        }
+      }
+    },
+
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "$ignoreUnknownInstances": true,
+
+      "MTKCommands": {
+        "$ignoreUnknownInstances": true,
+        "$path": "src/Server"
+      }
+    },
+
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "$ignoreUnknownInstances": true,
+
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "$ignoreUnknownInstances": true,
+
+        "MTKCommands": {
+          "$ignoreUnknownInstances": true,
+          "$path": "src/Client"
+        }
+      }
+    }
+  }
+}
