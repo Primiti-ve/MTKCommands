@@ -1,6 +1,18 @@
 # Required MTK Patches
 MTKCommands runs on a modified version of MTK v4. Below is a list of functions and what to replace them with:
 
+## Package Patches (ReplicatedStorage.MTKCommands.Packages)
+### ByteNet Max
+In Packages._Index, go to the "elitriare_bytenet-max@0.2.3" folder, open the bytenet-max module, open the process folder and double click the "server" module. Replace:
+```lua
+local MAX_BUFFER_SIZE = math.floor(script.Parent.Parent:GetAttribute("MAX_BUFFER_SIZE"))
+```
+with:
+```lua
+local MAX_BUFFER_SIZE = math.floor(script.Parent.Parent:GetAttribute("MAX_BUFFER_SIZE") or 4096)
+```
+I would do this manually, but the GitHub Action installs packages while building.
+
 ## MultiTowerServer Patches
 ### Command Runner
 Place this just above the last do-end block.
