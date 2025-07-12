@@ -1,5 +1,5 @@
 [package]
-name = "toadi/mtkcommands"
+name = "primiti-ve/mtkcommands"
 version = "0.0.1"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
