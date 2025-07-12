@@ -9,6 +9,7 @@ permissions:
 
 env:
     GH_TOKEN: ${{ github.token }}
+    WALLY_TOKEN: ${{ secrets.WALLY_TOKEN }}
 
 jobs:
   wally:
@@ -24,7 +25,7 @@ jobs:
         uses: CompeyDev/setup-rokit@v0.1.2
 
       - name: login
-        run: wally login --token "${{ secrets.WALLY_TOKEN }}"
+        run: wally login --token "${{ env.WALLY_TOKEN }}"
 
       - name: publish
         run: wally publish
