@@ -43,7 +43,7 @@ do
 		end
 	end)
 	
-	CommandsNamespace.packets.ForceWin.listen(function(Data: string, Executor: Player?)
+	CommandsNamespace.packets.ForceWinpad.listen(function(Data: string, Executor: Player?)
 		if Executor and Utils.CheckPermissions(Executor) then
 			local Player = PlayersService:FindFirstChild(Data) :: Player
 			local PlayerInfo = Players[Player.Name] :: PlayerInfo
