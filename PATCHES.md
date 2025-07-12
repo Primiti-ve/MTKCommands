@@ -5,6 +5,7 @@ MTKCommands runs on a modified version of MTK v4. Below is a list of functions a
 ### Command Runner
 Place this just above the last do-end block.
 ```lua
+do
 	local CommandsNamespace = require(ReplicatedStorage:WaitForChild("MTKCommands"):WaitForChild("Namespaces"):WaitForChild("Commands"))
 	local Utils = require(ReplicatedStorage:WaitForChild("MTKCommands"):WaitForChild("Utils"))
 
